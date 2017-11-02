@@ -23,8 +23,7 @@ def middle_letter_finder
     size = input.length
     puts "This word is odd, cool, you'll get back one letter."
     print "Calculating...".colorize(:light_blue)
-    array = input.chars.each_slice(1).map { |s| s.to_s }
-    middle_letter = array[(size-1)/2][2]
+    middle_letter = input[(size-1)/2]
     puts "done!".colorize(:green)
     print "The middle letter for "
     print "#{input}".colorize(:yellow)
@@ -46,8 +45,7 @@ def middle_letter_finder
     size = input.length
     puts "This word is even, ok, you'll get back two letters."
     print "Calculating...".colorize(:light_blue)
-    array = input.chars.each_slice(1).map { |s| s.to_s }
-    middle_letters = array[(size/2)-1][2] + array[size/2][2]
+    middle_letters = input[(size/2)-1] + input[size/2]
     puts "done!".colorize(:green)
     print "The middle letters for "
     print "#{input}".colorize(:yellow)
